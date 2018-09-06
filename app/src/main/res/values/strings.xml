@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BugoutDemo</string>
+    <string name="null_exp">产生一个NullPointException崩溃</string>
+    <string name="zero_exp">产生一个ArithmeticException崩溃</string>
+    <string name="index_exp">产生一个ArrayIndexOutOfBoundsException崩溃</string>
+    <string name="anr_exp">产生一个ANR异常</string>
+    <string name="custom_exp">产生一个自定义异常</string>
+    <string name="explain">说明：</string>
+    <string name="explain_content">1.崩溃和异常信息产生后，重启app触发数据上传\n2.摇一摇bug反馈信息实时上传\n3.若需要进行bug反馈操作，可摇一摇手机，根据提示信息进行相关操作\n4.产生ANR异常需要用户在点击“产生一个ANR异常”按钮后，点击屏幕几下或者点击返回键，稍等几秒后弹出系统提示则证明ANR异常产生</string>
+</resources>

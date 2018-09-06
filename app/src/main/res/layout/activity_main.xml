@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context="cn.testin.bugout.demo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_null_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/null_exp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_zero_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zero_exp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_index_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/index_exp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_custom_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/custom_exp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_anr_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/anr_exp"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/explain" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/explain_content" />
+
+</LinearLayout>
