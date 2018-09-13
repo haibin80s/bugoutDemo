@@ -13,7 +13,7 @@ public class MyApplication extends Application {
     /**
      * 用户在Bugout平台创建应用时分配的应用标识
      */
-    private final String APPKEY = "b24efd3883acc5254cb5b175918d6f57";
+    private final String APPKEY = "422b3752afb24835340b9ad2558206fc";
 
     @Override
     public void onCreate() {
