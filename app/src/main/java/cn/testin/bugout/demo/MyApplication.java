@@ -21,10 +21,22 @@ public class MyApplication extends Application {
         TestinDataConfig testinDataConfig = new TestinDataConfig()
                 .collectCrash(true)//设置收集crash异常
                 .collectANR(true)//设置收集ANR异常
+                .collectNDKCrash(true)//收集NDK异常，需集成bugout-ndk
                 .collectUserSteps(true)//设置收集用户操作步骤，需在activity添加相关回调，详见baseActivity
                 .collectLogCat(true)//设置收集logCat日志
+                .setScreenshot(true)
                 .setShakeSpeed(1500)//设置摇一摇触发阈值，默认1500，数值越低越灵敏
                 .openShake(true);//打开摇一摇反馈bug功能
         TestinDataApi.init(this, APPKEY, testinDataConfig);
+        loadCrashTest();
     }
+
+    private void loadCrashTest() {
+        try {
+            System.loadLibrary("crashtest");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

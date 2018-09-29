@@ -9,15 +9,16 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        ndk {
+            moduleName "crashtest"
+            abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a'
         }
-        debug {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
         }
     }
 }
@@ -29,7 +30,8 @@ dependencies {
     })
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'cn.testin.analysis:testin-data:5.0.4'
-    implementation 'cn.testin.analysis:bugout:1.0.2-beta'
+    implementation 'cn.testin.analysis:testin-data:5.0.6'
+    implementation 'cn.testin.analysis:bugout:1.0.4'
+    implementation 'cn.testin.analysis:bugout-ndk:1.0.0-beta'
     testImplementation 'junit:junit:4.12'
 }

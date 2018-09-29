@@ -13,6 +13,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button btnIndexExp;
     private Button btnCustomExp;
     private Button btnANRExp;
+    private Button btnNDKExp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +25,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btnIndexExp = findViewById(R.id.btn_index_exp);
         btnCustomExp = findViewById(R.id.btn_custom_exp);
         btnANRExp = findViewById(R.id.btn_anr_exp);
+        btnNDKExp = findViewById(R.id.btn_ndk_exp);
 
         btnNullPointExp.setOnClickListener(this);
         btnZeroExp.setOnClickListener(this);
         btnIndexExp.setOnClickListener(this);
         btnCustomExp.setOnClickListener(this);
         btnANRExp.setOnClickListener(this);
+        btnNDKExp.setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +52,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_anr_exp:
                 testANRExp();
+                break;
+            case R.id.btn_ndk_exp:
+                testNDKErr();
                 break;
         }
     }
@@ -76,4 +82,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         }
     }
+
+    public static native void testNDKErr();
 }
